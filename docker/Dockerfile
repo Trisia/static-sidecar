@@ -3,7 +3,7 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositorie
       apk add openjdk8-jre-base && \
       rm -rf /var/cache/apk/*
 
-COPY docker/test-resource/*  /usr/share/nginx/html
+COPY docker/test-resource/  /usr/share/nginx/html
 COPY docker/default.conf /etc/nginx/conf.d/default.conf
 
 ADD target/static-sidecar-1.0.0-SNAPSHOT.jar /app.jar

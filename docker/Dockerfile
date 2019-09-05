@@ -5,4 +5,4 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositorie
 
  ADD target/static-sidecar-1.0.0-SNAPSHOT.jar /app.jar
 
- ENTRYPOINT sh -c 'service nginx start && java -jar /app.jar'
+ ENTRYPOINT sh -c 'nginx && java -jar /app.jar'

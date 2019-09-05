@@ -1,13 +1,13 @@
 server:
-    port: 7777
-    spring:
-      application:
-        name: static-sidecar
-    eureka:
-      client:
-        service-url:
-          defaultZone: ${REGISTER_SERVER_URL:http://172.22.203:8761/eureka}
+  port: 7777
+  spring:
+    application:
+      name: static-sidecar
+  eureka:
+    client:
+      service-url:
+        defaultZone: ${REGISTER_SERVER_URL:http://172.22.203:8761/eureka}
 
-    sidecar:
-      port: 7776                                     # 本地的 nginx 服务端口
-      health-uri: http://localhost:7776/health.json  # 健康检查
+  sidecar:
+    port: 7776                                     # 本地的 nginx 服务端口
+    health-uri: http://localhost:7776/health.json  # 健康检查

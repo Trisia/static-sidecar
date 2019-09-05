@@ -10,5 +10,5 @@ eureka:
 
 
 sidecar:
-  port: 7776                                     # ±¾µØµÄ nginx ·şÎñ¶Ë¿Ú
-  health-uri: http://localhost:7776/health.json  # ½¡¿µ¼ì²é
+  port: 7776                                     # æœ¬åœ°çš„ nginx æœåŠ¡ç«¯å£
+  health-uri: http://localhost:7776/health.json  # å¥åº·æ£€æŸ¥

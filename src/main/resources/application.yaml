@@ -4,6 +4,9 @@ spring:
   application:
     name: static-sidecar
 eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
   client:
     service-url:
       defaultZone: ${REGISTER_SERVER_URL:http://172.22.203.11:8761/eureka/}
